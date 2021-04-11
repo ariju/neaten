@@ -50,6 +50,11 @@
         </v-menu>
       </v-toolbar-items>
     </v-app-bar>
+    <div class="head">
+      <p>
+        locate
+      </p>
+    </div>
     <div class="content">
       <div class="content_title">
         <div class="TextAnime1">
@@ -65,11 +70,56 @@
         <nuxt />
       </div>
     </div>
-    <v-card>
-      <h2></h2>
+    <!-- メイン２ -->
+    <v-card height="680" class="main">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+              <h1 class="post-title text-center ma-8 display-1 font-weight-bold">
+                アプリ紹介
+              </h1>
+              <hr />
+              <h2 class="post-subtitle ma-5 headline font-weight-bold">
+                Neaten収納管理アプリ
+              </h2>
+              <p class="post-meta font-weight-bold mx-6 title">
+                このアプリは私自信が机の中の物や
+                タンスの中に何を入れたか管理したかった為製作した物です。
+                例えば机の中にたまにしか使用しない書類等を収納して、
+                何処に何を入れたか直ぐに見つけられるようにしたかった為です。
+                タンスの中であれば着たい服が何処にあるかが分かれば便利だと思います。
+              </p>
+              <h2 class="text-center ma-6">アプリで出来ること</h2>
+              <v-img
+              src="https://picsum.photos/350/165?random"
+              max-height="125"
+              contain
+              class="grey darken-4"
+            ></v-img>
+            </div>
+          </div>
+      </div>
     </v-card>
-    <v-footer color="#C0C0C0" dark app>
-      Neaten
+    <!-- フッター -->
+    <v-footer flat tile color="#C0C0C0" class="white--text text-center">
+      <v-card-text>
+        <v-icon size="35px">
+          mdi-firebase
+        </v-icon>
+        <v-icon size="35px">
+          mdi-vuetify
+        </v-icon>
+        <v-icon size="35px">
+          mdi-nuxt
+        </v-icon>
+        <v-icon size="35px">
+          mdi-github
+        </v-icon>
+        <v-divider class="mt-3"></v-divider>
+        <v-card-text class="fot white--text mt-2">
+          {{ new Date().getFullYear() }} — <strong>Neaten</strong>
+        </v-card-text>
+      </v-card-text>
     </v-footer>
   </v-app>
 </template>
@@ -79,7 +129,7 @@ export default {
   data() {
     return {
       drawer: null,
-      text: "収納を管理しよう"
+      text: "Naetenは収納を管理するアプリです。"
     };
   },
   methods: {
@@ -109,6 +159,12 @@ export default {
 </script>
 
 <style scoped>
+.head {
+  height: 120px;
+  font-size: 50px;
+  padding-top: 50px;
+  font-weight: bold;
+}
 .content {
   height: 664px;
   display: flex;
@@ -138,5 +194,13 @@ export default {
   min-width: 0.3em;
   font-size: 3rem;
   animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+}
+.fot {
+  font-size: 30px;
+}
+.main {
+  width: 100%;
+  background-size: cover;
+  background-color: #dddddd;
 }
 </style>
