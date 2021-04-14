@@ -102,19 +102,27 @@
     </v-card>
     <!-- フッター -->
     <v-footer flat tile color="#C0C0C0" class="white--text text-center">
-      <v-card-text>
-        <v-icon size="35px">
-          mdi-firebase
-        </v-icon>
-        <v-icon size="35px">
-          mdi-vuetify
-        </v-icon>
-        <v-icon size="35px">
-          mdi-nuxt
-        </v-icon>
-        <v-icon size="35px">
-          mdi-github
-        </v-icon>
+      <v-card-text mr-5>
+        <img 
+        height="30"
+        :src="require('@/assets/images/vuetify.svg')"
+        class="mr-3"
+        >
+        <img 
+        height="30"
+        :src="require('@/assets/images/nuxt.png')"
+        class="mr-3"
+        >
+        <img 
+        height="30"
+        :src="require('@/assets/images/firebase.png')"
+        class="mr-3"
+        >
+        <img 
+        height="30"
+        :src="require('@/assets/images/github.png')"
+        class="mr-3"
+        >
         <v-divider class="mt-3"></v-divider>
         <v-card-text class="fot white--text mt-2">
           {{ new Date().getFullYear() }} — <strong>Neaten</strong>
@@ -162,7 +170,7 @@ export default {
 .head {
   height: 120px;
   font-size: 50px;
-  padding-top: 50px;
+  padding-top: 55px;
   font-weight: bold;
 }
 .content {
